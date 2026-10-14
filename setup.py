@@ -19,7 +19,7 @@ def get_requirement(file_path:str)->list[str]:
 
 
 setup(
-name='ML_project',
+name='laptop_failure_prediction',
 version='0.0.1',
 author='sharad',
 author_email='bordesharad9@gmail.com',
