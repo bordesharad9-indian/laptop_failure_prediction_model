@@ -1,0 +1,53 @@
+
+<form method="POST" action="/">
+    <label>CPU Temperature (°C)</label>
+    <input type="number" step="any" name="cpu_temp" value="75" required>
+
+    <label>GPU Temperature (°C)</label>
+    <input type="number" step="any" name="gpu_temp" value="65" required>
+
+    <label>CPU Usage (%)</label>
+    <input type="number" step="any" name="cpu_usage" value="70" required>
+
+    <label>GPU Usage (%)</label>
+    <input type="number" step="any" name="gpu_usage" value="60" required>
+
+    <label>RAM Usage (%)</label>
+    <input type="number" step="any" name="ram_usage" value="75" required>
+
+    <label>Disk Usage (%)</label>
+    <input type="number" step="any" name="disk_usage" value="60" required>
+
+    <label>Disk I/O (MB/s)</label>
+    <input type="number" step="any" name="disk_io" value="100" required>
+
+    <label>Battery Level (%)</label>
+    <input type="number" step="any" name="battery" value="80" required>
+
+    <label>Fan Speed (RPM)</label>
+    <input type="number" step="any" name="fan_speed" value="2500" required>
+
+    <button type="submit">Predict Failure Risk</button>
+</form>
+
+{% if results %}
+    <h2>Prediction Results</h2>
+    <p>Failure Probability: {{ results.probability }}%</p>
+    <p>Risk Level: {{ results.level }}</p>
+    <p>
+        Status:
+        {% if results.failure %}
+            Potential Failure Risk Detected
+        {% else %}
+            No High Failure Risk Detected
+        {% endif %}
+    </p>
+{% endif %}
+
+{% if missing_fields %}
+    <p>Missing sensor values were replaced using preprocessing.</p>
+{% endif %}
+
+{% if error %}
+    <p>{{ error }}</p>
+{% endif %}
