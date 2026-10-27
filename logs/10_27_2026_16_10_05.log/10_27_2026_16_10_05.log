@@ -1,0 +1,4 @@
+[ 2026-10-27 16:10:06,052 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2026-10-27 16:10:06,055 ] 97 werkzeug - INFO -  * Debugger PIN: 314-788-109
+[ 2026-10-27 16:10:18,258 ] 97 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2026 16:10:18] "GET / HTTP/1.1" 200 -
+[ 2026-10-27 16:10:18,788 ] 97 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2026 16:10:18] "GET / HTTP/1.1" 200 -
